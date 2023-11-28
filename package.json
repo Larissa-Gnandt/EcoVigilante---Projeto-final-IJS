@@ -1,0 +1,15 @@
+{
+  "name": "ecovigilante-projeto-final-ijs",
+  "version": "1.0.0",
+  "description": "É uma aplicação que permite aos usuários denunciar casos de poluição, desmatamento, caça ilegal e outras atividades prejudiciais ao meio ambiente.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
