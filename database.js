@@ -1,5 +1,6 @@
 const User = require("./user");
 const Complaint = require("./complaint");
+const Location = require("./location");
 
 class Database {
   #users;
@@ -24,8 +25,12 @@ class Database {
     return user;
   }
 
-  createComplaint(title, description, location) {
-    const complaint = new Complaint(title, description, location);
+  createComplaint(title, description, latitude, longitude) {
+    const complaint = new Complaint(
+      title,
+      description,
+      new Location(latitude, longitude)
+    );
     this.#complaints.push(complaint);
     return complaint;
   }

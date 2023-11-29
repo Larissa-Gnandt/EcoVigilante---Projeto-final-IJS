@@ -48,6 +48,20 @@ class User {
   addComplaint(complaint) {
     this.#complaints.push(complaint);
   }
+
+  toString() {
+    return `
+    name: ${this.#name}
+    email: ${this.#email}
+    document: ${this.#document}
+    phone: ${this.#phone}
+    complaints: ${this.#complaints
+      .map((complaint) => {
+        return complaint.toString();
+      })
+      .join("")}
+    `;
+  }
 }
 
 module.exports = User;

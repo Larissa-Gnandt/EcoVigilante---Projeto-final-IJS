@@ -13,6 +13,10 @@ class Complaint {
     return this.#title;
   }
 
+  set title(title) {
+    this.#title = title;
+  }
+
   get description() {
     return this.#description;
   }
@@ -27,6 +31,15 @@ class Complaint {
 
   set location(location) {
     this.#location = location;
+  }
+
+  toString() {
+    return `
+    - title: ${this.#title}
+      description: ${this.#description}
+      latitude: ${this.#location.latitude}
+      longitude: ${this.#location.longitude}
+    `;
   }
 }
 
