@@ -1,6 +1,6 @@
-const User = require("./user");
-const Complaint = require("./complaint");
-const Location = require("./location");
+const User = require("../model/user");
+const Complaint = require("../model/complaint");
+const Location = require("../model/location");
 
 class Database {
   #users;
