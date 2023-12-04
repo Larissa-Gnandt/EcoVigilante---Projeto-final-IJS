@@ -1,14 +1,14 @@
 class User {
   #name;
   #email;
-  #document;
+  #cpf;
   #phone;
   #complaints;
 
-  constructor(name, email, document, phone) {
+  constructor(name, email, cpf, phone) {
     this.#name = name;
     this.#email = email;
-    this.#document = document;
+    this.#cpf = cpf;
     this.#phone = phone;
     this.#complaints = [];
   }
@@ -29,8 +29,8 @@ class User {
     this.#email = email;
   }
 
-  get document() {
-    return this.#document;
+  get cpf() {
+    return this.#cpf;
   }
 
   get phone() {
@@ -47,20 +47,6 @@ class User {
 
   addComplaint(complaint) {
     this.#complaints.push(complaint);
-  }
-
-  toString() {
-    return `
-    name: ${this.#name}
-    email: ${this.#email}
-    document: ${this.#document}
-    phone: ${this.#phone}
-    complaints: ${this.#complaints
-      .map((complaint) => {
-        return complaint.toString();
-      })
-      .join("")}
-    `;
   }
 }
 

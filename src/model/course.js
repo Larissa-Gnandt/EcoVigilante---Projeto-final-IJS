@@ -1,12 +1,12 @@
-class Complaint {
+class Course {
   #title;
   #description;
-  #location;
+  #duration;
 
-  constructor(title, description, location) {
+  constructor(title, description, duration) {
     this.#title = title;
     this.#description = description;
-    this.#location = location;
+    this.#duration = duration;
   }
 
   get title() {
@@ -25,13 +25,13 @@ class Complaint {
     this.#description = description;
   }
 
-  get location() {
-    return this.#location;
+  get duration() {
+    return this.#duration;
   }
 
-  set location(location) {
-    this.#location = location;
+  set duration(duration) {
+    this.#duration = duration;
   }
 }
 
-module.exports = Complaint;
+module.exports = Course;

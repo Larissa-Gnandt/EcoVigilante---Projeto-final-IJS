@@ -1,14 +1,19 @@
 const User = require("../model/user");
 const Complaint = require("../model/complaint");
 const Location = require("../model/location");
+const Course = require("../model/course");
 
 class Database {
   #users;
   #complaints;
+  #courses;
+  #validator;
 
-  constructor() {
+  constructor(validator) {
     this.#users = [];
     this.#complaints = [];
+    this.#courses = [];
+    this.#validator = validator;
   }
 
   get users() {
@@ -21,8 +26,10 @@ class Database {
 
   createUser(name, email, document, phone) {
     const user = new User(name, email, document, phone);
-    this.#users.push(user);
-    return user;
+    if (this.#validator.validateUser(user)) {
+      this.#users.push(user);
+      return user;
+    }
   }
 
   createComplaint(title, description, latitude, longitude) {
@@ -31,8 +38,18 @@ class Database {
       description,
       new Location(latitude, longitude)
     );
-    this.#complaints.push(complaint);
-    return complaint;
+    if (this.#validator.validateComplaint(complaint)) {
+      this.#complaints.push(complaint);
+      return complaint;
+    }
+  }
+
+  createCourses(title, description, duration) {
+    const course = new Course(title, description, duration);
+    if (this.#validator.validateCourse(course)) {
+      this.#courses.push(course);
+      return course;
+    }
   }
 }
 

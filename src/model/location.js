@@ -20,7 +20,7 @@ class Location {
   }
 
   set longitude(longitude) {
-    this.#latitude = longitude;
+    this.#longitude = longitude;
   }
 }
 
