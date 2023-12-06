@@ -33,6 +33,10 @@ class User {
     return this.#cpf;
   }
 
+  set cpf(cpf) {
+    this.#cpf = cpf;
+  }
+
   get phone() {
     return this.#phone;
   }
