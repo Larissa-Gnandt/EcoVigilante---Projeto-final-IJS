@@ -24,6 +24,10 @@ class Database {
     return this.#complaints;
   }
 
+  get courses() {
+    return this.#courses;
+  }
+
   createUser(name, email, document, phone) {
     const user = new User(name, email, document, phone);
     if (this.#validator.validateUser(user)) {
