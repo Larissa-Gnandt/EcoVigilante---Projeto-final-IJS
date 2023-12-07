@@ -28,8 +28,8 @@ class Database {
     return this.#courses;
   }
 
-  createUser(name, email, document, phone) {
-    const user = new User(name, email, document, phone);
+  createUser(name, email, cpf, phone) {
+    const user = new User(name, email, cpf, phone);
     if (this.#validator.validateUser(user)) {
       this.#users.push(user);
       return user;
