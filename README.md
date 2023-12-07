@@ -46,4 +46,5 @@ A proposta do EcoVigilante é impulsionar a autonomia e a participação ativa d
 
 ## UML
 
-![UML - EcoVigilante](https://github.com/Larissa-Gnandt/EcoVigilante-Projeto-final-IJS/assets/124943742/b74f05d3-04f5-48dc-8438-ac1764eed041)
+![UML - EcoVigilante](https://github.com/Larissa-Gnandt/EcoVigilante-Projeto-final-IJS/assets/124943742/3abe864d-b752-41ca-a1e8-60866983f21d)
+
